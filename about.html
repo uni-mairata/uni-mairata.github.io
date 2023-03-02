@@ -4,29 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-<!--   <meta name="description" content="Hello! I'm Maika Hirata."> -->
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
   <meta name="google" content="notranslate" />
-  <meta name="keywords" content="portfolio">
-  <meta name="author" content="Maika Hirata">
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
 
-  <title>maika hirata</title>
-  <link rel="icon" type="image/x-icon" href="../assets/apple-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <title>Title page</title>
 
   <link href="../css/style.css" rel="stylesheet">
 </head>
 
-<body class="minimal">
+<body class="">
   <div id="site-border-left"></div>
   <div id="site-border-right"></div>
   <div id="site-border-top"></div>
   <div id="site-border-bottom"></div>
   <!-- Add your content of header -->
   <header>
-    <nav class="navbar  navbar-fixed-top navbar-inverse">
+    <nav class="navbar  navbar-fixed-top navbar-default">
       <div class="container">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
           aria-expanded="false">
@@ -50,42 +51,11 @@
       </div>
     </nav>
   </header>
-  
-  <!-- Top main section START -->
-  <div class="hero-full-container background-image-container white-text-container"
-    style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),
-                       rgba(0, 0, 0, 0.7)), url('./assets/images/Animated.GIF')">
-<!--     TODO: figure out a better image than this one as the background -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="hero-full-wrapper">
-            <div class="text-content">
-              <h1>Hello!<br>
-                <span id="typed-strings">
-                  <span>i'm maika hirata</span>
-                  <span>high school senior</span>
-                  <!-- TODO: add more -->
-                  <!-- <span>text here</span> -->
-                  <!-- <span>text here</span> -->
-                </span>
-                <span id="typed"></span>,
-              </h1>
-              <h2>interested in CS and art.</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Top main section END -->
 
-  <!--   Bottom main section START -->
   <div class="section-container">
     <div class="container">
       <div class="row">
-        <!-- TODO: add margin as external css later -->
-        <div class="col-xs-12" style="margin: 8px;">
+        <div class="col-xs-12">
           <div class="section-container-spacer text-center">
             <h1 class="h2">01 : About me</h1>
           </div>
@@ -108,6 +78,9 @@
                     Phasellus iaculis magna sagittis elit sagittis, at hendrerit lorem venenatis. Morbi accumsan iaculis
                     blandit. Cras ultrices hendrerit nisl.</p>
                 </div>
+                <div class="col-xs-12 col-md-6">
+                  <img src="./assets/images/profil.jpg" class="img-responsive" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -117,15 +90,23 @@
       </div>
     </div>
   </div>
-  <!--   Bottom main section END -->
+
+
+  <footer class="footer-container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p>© Maika Hirata</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", function (event) {
-      type();
-      movingBackgroundImage();
+      navActivePage();
     });
   </script>
-
 
   <script type="text/javascript" src="../js/main.70a66962.js"></script>
 </body>
