@@ -4,7 +4,7 @@
  * Custom rulesets
  */
 div .img-credit {
-    display: inline;
+    display: inline-block;
 }
 
 /*!
