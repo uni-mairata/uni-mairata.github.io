@@ -3,8 +3,9 @@
 /*!
  * Custom rulesets
  */
- /* .img-credit {
- } */
+div .img-credit {
+    display: inline;
+}
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
