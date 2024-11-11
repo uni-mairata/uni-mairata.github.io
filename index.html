@@ -122,7 +122,7 @@
                 
                 <div class="col-xs-12 col-md-6">
                   <h3>TODO: add me on linkedin</h3>
-                  <button type="submit" onclick="window.open('assets/Hirata_resume.docx')">Download my resume</button>
+                  <button type="button" onclick="downloadResume()">Download my resume</button>
                   <h3>TODO: download my resume</h3>
                 </div>
 
@@ -140,10 +140,14 @@
       type();
       movingBackgroundImage();
     });
+
+    function downloadResume() {
+      window.open(/assets/Hirata_Resume.docx)
+    }
   </script>
 
 
-  <script type="text/javascript" src="/js/main.70a66962.js"></script>
+  <script type="text/javascript" src="/js/main.70a66962.js"></script>\
 </body>
 
 </html>
