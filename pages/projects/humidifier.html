@@ -47,7 +47,7 @@
 
 
           <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-            <li><a href="/" title="" class="active">001</a></li> <!-- TODO: change to add proper page links-->
+            <li><a href="/pages/projects/humidifier.html" title="" class="active">001</a></li>
             <li><a href="/" title="">002</a></li> <!-- TODO: change to add proper page links-->
             <li><a href="/" title="">003</a></li> <!-- TODO: change to add proper page links-->
             <li><a href="/" title="">004</a></li> <!-- TODO: change to add proper page links-->
@@ -67,15 +67,75 @@
           <img src="/assets/images/work001-01.jpg" class="img-responsive" alt="">
           <div class="card-container">
             <div class="text-center">
-              <h1 class="h2">001 : Fringilla sit amet</h1>
+              <h1 class="h2">001 : Custom Automatic Humidifier</h1>
             </div>
-            <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies, nisl nunc pulvinar ligula, id sodales
-              arcu sapien in nisi. Quisque libero enim, mattis non augue posuere, venenatis dapibus urna.</p>
+
+            <!-- Main page content START -->
+            <p>
+              This discovery project is a hands-on exploration of taking an existing electronic device and modifying 
+              it to function differently than originally intended. In this case, I took a store-bought humidifier and 
+              connected it to an Arduino UNO using jumper wires and a breadboard. The Arduino controls the humidifier 
+              to turn on when desired, which is when the humidity drops lower than 30%.
+              <br>
+              The original goal for modifying a humidifier in this way is to prevent eczema flareups, especially as 
+              winter approaches and the air becomes drier overall. Since high humidity can also exacerbate eczema, on 
+              top of potential mold growth and wood rot, I didn't want to keep the humidifier on for too long either. 
+              This makes remembering to manually turn the humidifier on and off more of a hassle. Automating this process 
+              and having a device that can keep track of the the humidity in the room is much simpler.
+              <br>
+              There were several sources I could reference online when working on this project, specifically this:
+              <a href="https://projecthub.arduino.cc/chenwei19940207/automatic-humidifier-e7cb30">
+                "Automatic Humidifier" by chenwei19940207 on <b>Arduino Project Hub</b>
+              </a>
+              <br>
+              In the project I referenced, the materials are clear but the instructions on how the humidifier was connected 
+              to the breadboard itself are unclear. So, I also looked at several videos where people disassemble humidifiers. 
+              There are surprisingly a lot of videos, either for just disassembly or repair:
+              <a href="https://www.youtube.com/watch?v=SRin28N2eD4&ab_channel=DiffuserDoc">
+                "How to repair a URPOWER 500ml essential oil diffuser with parts from diffuserdoc.com" by DiffuserDoc on <b>YouTube</b>
+              </a>
+              <a href="https://www.youtube.com/watch?v=gQZT0cHUNPM&ab_channel=BGTech">
+                "Ultrasonic Essential Oil Diffuser Teardown & How It Works" by BG Tech on <b>YouTube</b>
+              </a>
+              <br>
+              I took apart the humidifier and connected 2 jumper wires as the Arduino Hub tutorial shows:
+            </p>
+            <img src="/assets/images/humidifier-project/arduino-hub-eg.jpg" class="img-responsive" alt="Wires plugged into the humidifier from tutorial">
+            <div class="img-credit">
+              <p class="img-credit">Credit: background image by</p>
+              <a href="https://projecthub.arduino.cc/chenwei19940207/automatic-humidifier-e7cb30"" class="img-credit">
+                chenwei19940207 on Arduino Project Hub
+              </a>
+            </div>
+            <p>
+              I ended up plugging in another jumper wire between the yellow and green jumper wires. This is because there are 2 
+              different modes that the humidifier operates in, which is a red light mode which is continuous for up to 3 hours 
+              and a green light mode which is intermittent mist which turns on and off at 30 second intervals for up to 6 hours. 
+              The tutorial only uses the green light mode, but I wanted to see if it's possible to get the red light mode working as well, 
+              which ended up working as well. The green wire connects to ground while the other 2 wires were connected to ports as outputs. 
+            </p>
+            <img src="/assets/images/humidifier-project/wires-connected.jpg" class="img-responsive" alt="Wires of humidifier">
+            <p>
+              The code for the project was fairly simple, with only an if statement to check where the humidity was at and to turn on the 
+              humidifier if the humidity wasn't in the desired range, all while checking the room humidity.
+            </p>
+            <img src="/assets/images/humidifier-project/project-code.png" class="img-responsive" alt="Arduino code the project">
+            <p>
+              The humidity itself was checked by a DHT11 sensor, which I hadn't used prior to this project. I read through and viewed a video 
+              on how it works:
+              <a href="https://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-an-arduino/">
+                "How to Set Up the DHT11 Humidity Sensor on an Arduino" by Scott Campbell on <b>Circuit Basics</b>
+              </a>
+              The tutorial was easy to understand, and I was able to learn about a component that I hadn't used before. I also learned that the 
+              same module can be used to measure the temperature of the room, which means if I wanted to, I could utilize it for another project 
+              since when I ordered the part online, 2 were shipped.
+            </p>
 
             <blockquote>
               <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</p>
               <small class="pull-right">Irina Martin</small>
             </blockquote>
+            <!-- Main page content END -->
           </div>
         </div>
 
@@ -107,7 +167,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <p>© UNTITLED | Website created with <a href="http://www.mashup-template.com/"
+          <p>© 2024 Maika Hirata | Website created with <a href="http://www.mashup-template.com/"
               title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/"
               title="Beautiful Free Images">Unsplash</a></p>
         </div>
