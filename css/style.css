@@ -6,30 +6,21 @@
 div .img-credit {
     display: inline-block;
 }
-a .home_pg_button {
+
+a:link .home-pg-buton, a:visited .home-pg-buton {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-    transition: box-shadow 0.15s ease,transform 0.15s ease;
-    will-change: box-shadow,transform;
-    background: #FCFCFD;
-    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
-    height: 48px;
-    padding: 0 32px;
-    font-size: 18px;
-    border-radius: 6px;
-    color: #36395a;
-    transition: box-shadow 0.15s ease,transform 0.15s ease;
-    :hover {
-        box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
-        transform: translateY(-2px);
-    }
-    :active{
-        box-shadow: inset 0px 3px 7px #d6d6e7;
-        transform: translateY(2px);
-    }
-}
+  }
+  
+  a:hover .home-pg-buton, a:active .home-pg-buton {
+    background-color: green;
+    color: white;
+  }
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
