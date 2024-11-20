@@ -233,12 +233,12 @@ td,th{
     box-sizing:border-box
 }
 html{
-    font-size:14px;
+    font-size:10px;
     -webkit-tap-highlight-color:transparent
 }
 body{
     font-family:Roboto Mono,Helvetica,Arial,sans-serif;
-    font-size:11px;
+    font-size:13px;
     line-height:1.78;
     color:#000;
     background-color:#fff
