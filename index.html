@@ -114,7 +114,7 @@
                 </div>
                 
                 <div class="col-xs-12 col-md-6">
-                  <a href="assets/Hirata_Resume.docx"
+                  <a href="assets/Hirata_Resume.pdf"
                       target="_blank"
                       class="home-pg-button">
                     Download my resume
@@ -124,6 +124,8 @@
                       class="home-pg-button">
                     Connect on LinkedIn
                   </a>
+                  <!-- <div id="pdfRenderer"></div> -->
+                    <div id="my-pdf"></div>
                 </div>
 
               </div>
@@ -153,7 +155,14 @@
   </script>
 
 
-  <script type="text/javascript" src="/js/main.70a66962.js"></script>\
+<style>
+  .pdfobject-container { height: 500px; border: 1px solid #ccc; }
+  </style>
+<script src="https://unpkg.com/pdfobject"></script>
+<script>PDFObject.embed("/path/to/file.pdf", "#my-pdf");</script>
+
+  <script type="text/javascript" src="/js/main.70a66962.js"></script>
+  <script type="text/javascript" src="/js/custom.js"></script>
 </body>
 
 </html>
