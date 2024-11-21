@@ -182,8 +182,8 @@
     
     // for loading pdf
     PDFObject.embed("/assets/Hirata_Resume.pdf", "#resume-render");
-    wait(200);  // 0.2 seconds in milliseconds
     window.onbeforeunload = function () {
+      wait(1000);  // 1 second in milliseconds
       window.scrollTo(0, 0);
     }
   </script>
