@@ -156,26 +156,36 @@
     </div>
   </footer>
 
+  <style>
+    .pdfobject-container { height: 500px; border: 1px solid #ccc; }
+  </style>
+
+  <script src="https://unpkg.com/pdfobject"></script>
+  <script type="text/javascript" src="/js/main.70a66962.js"></script>
+  <script type="text/javascript" src="/js/custom.js"></script>
+
   <script>
+
+    function wait(ms){
+      var start = new Date().getTime();
+      var end = start;
+      while(end < start + ms) {
+        end = new Date().getTime();
+      }
+    }
+    
+    // for bg img at the top of the site
     document.addEventListener("DOMContentLoaded", function (event) {
       type();
       movingBackgroundImage();
     });
-  </script>
-
-
-  <style>
-    .pdfobject-container { height: 500px; border: 1px solid #ccc; }
-  </style>
-  
-  <script src="https://unpkg.com/pdfobject"></script>
-  <script>
+    
+    // for loading pdf
     PDFObject.embed("/assets/Hirata_Resume.pdf", "#resume-render");
+    wait(7000);  //7 seconds in milliseconds
     window.scrollTo(0, 0);
   </script>
 
-  <script type="text/javascript" src="/js/main.70a66962.js"></script>
-  <script type="text/javascript" src="/js/custom.js"></script>
 </body>
 
 </html>
