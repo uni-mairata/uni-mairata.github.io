@@ -180,10 +180,12 @@
       movingBackgroundImage();
     });
     
-    // // for loading pdf
-    // PDFObject.embed("/assets/Hirata_Resume.pdf", "#resume-render");
-    // wait(200);  // 0.2 seconds in milliseconds
-    // window.scrollTo(0, 0);
+    // for loading pdf
+    PDFObject.embed("/assets/Hirata_Resume.pdf", "#resume-render");
+    wait(200);  // 0.2 seconds in milliseconds
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
   </script>
 
 </body>
