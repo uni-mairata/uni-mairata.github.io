@@ -1,0 +1,21 @@
+/*!
+ * Custom rulesets
+ */
+div .img-credit {
+    display: inline-block;
+}
+ 
+.home-pg-button:link, .home-pg-button:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid gray;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.home-pg-button:hover, .home-pg-button:active {
+  background-color: gray;
+  color: white;
+}
