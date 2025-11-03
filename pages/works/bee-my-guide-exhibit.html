@@ -16,6 +16,20 @@
   <title>Bee My Guide Exhibit (Georgia Tech VIP Team)</title>
 
   <link href="/css/style.css" rel="stylesheet">
+  <style>
+    /* Quick-jump dropdown styles (small, low-risk inline addition) */
+    .section-jump { margin: 0.75rem 0; }
+    #section-select {
+      font-size: 1rem;
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid rgba(0,0,0,0.12);
+      background: #fff;
+      color: inherit;
+    }
+    /* screen-reader-only helper */
+    .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  </style>
 </head>
 
 <body class="">
@@ -68,10 +82,21 @@
             <img src="/assets/images/bee-my-guide-project/Mr.Bee_still-1.png" class="img-responsive"
               alt="Protagonist of the game">
 
-            TODO: insert section headers links to be able to jump between the h2 headings
-            TODO: change written out number to arabic numeral on resume
+            <!-- Quick-jump dropdown to navigate page sections -->
+            <div class="section-jump">
+              <label for="section-select" class="sr-only">Jump to section</label>
+              <select id="section-select" aria-label="Jump to section">
+                <option value="">Jump to…</option>
+                <option value="overview">About Electronic ARTrium</option>
+                <option value="my-work">My Work on the Project</option>
+                <option value="about-show">About "Bee My Guide"</option>
+                <option value="more-info">More Information</option>
+              </select>
+            </div>
 
-            <h2>
+            <!-- TODO: change written out number to arabic numeral on resume -->
+
+            <h2 id="overview">
               About Electronic ARTrium
             </h2>
             <p>
@@ -87,7 +112,7 @@
             </ul>
             </p>
             
-            <h2>
+            <h2 id="my-work">
               My Work on the Project
             </h2>
             <h3>
@@ -97,7 +122,7 @@
               The animatronic in Section 2 was Cappy the Caterpillar who had eyes that had horizontal and vertical ranges 
               of motion. In my first semester (Fall 2024) on the EM team, the assigned task was to develop a system for 
               Cappy's eyes to be able to track the player based on the pose detection camera system that was being developed 
-              by the SPN team.
+              by the SPN team. 
               <!-- Project was handed off eventually for me to work on something deemed more important for the mood of the entire project -->
             </p>
             <h3>
@@ -107,7 +132,7 @@
               <!-- Spotlights and clouds -->
             </p>
 
-            <h2>
+            <h2 id="about-show">
               About "Bee My Guide" - The ARTrium's Second Show
             </h2>
             <p>
@@ -134,7 +159,7 @@
               </ol>
             </p>
 
-            <h2>
+            <h2 id="more-info">
               More Information
             </h2>
             <p>
@@ -182,6 +207,68 @@
   <script>
     document.addEventListener("DOMContentLoaded", function (event) {
       navActivePage();
+
+      // Section-jump select behavior: smooth scroll + update hash
+      const select = document.getElementById('section-select');
+      if (!select) return;
+
+      // Initialize select from current hash (if present)
+      if (location.hash) {
+        const current = location.hash.replace('#','');
+        if (Array.from(select.options).some(o => o.value === current)) {
+          select.value = current;
+        }
+      }
+
+      // small guard so programmatic updates from the observer don't fight user's explicit select action
+      let ignoreObserver = false;
+
+      select.addEventListener('change', function () {
+        const id = this.value;
+        if (!id) return;
+        const el = document.getElementById(id);
+
+        // temporarily suppress observer updates while animating
+        ignoreObserver = true;
+        setTimeout(() => { ignoreObserver = false; }, 600);
+
+        if (el && 'scrollIntoView' in el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // update the hash without the instant jump
+          history.replaceState(null, '', '#' + id);
+        } else {
+          // fallback: set hash (will jump)
+          location.hash = '#' + id;
+        }
+
+        // Move focus to the section heading for accessibility
+        if (el) {
+          const focusTarget = el.querySelector('h1,h2,h3,legend') || el;
+          focusTarget.setAttribute('tabindex', '-1');
+          focusTarget.focus({ preventScroll: true });
+          setTimeout(() => focusTarget.removeAttribute('tabindex'), 1000);
+        }
+      });
+
+      // IntersectionObserver to update the select as the user scrolls
+      const sectionElems = Array.from(document.querySelectorAll('#overview, #my-work, #about-show, #more-info'));
+      if (sectionElems.length) {
+        const observer = new IntersectionObserver((entries) => {
+          if (ignoreObserver) return;
+          // choose the entry with the largest intersectionRatio that's intersecting
+          const visible = entries.filter(e => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (visible && visible.target && visible.target.id) {
+            const id = visible.target.id;
+            if (Array.from(select.options).some(o => o.value === id)) {
+              select.value = id;
+              // keep URL hash in sync without causing a jump
+              history.replaceState(null, '', '#' + id);
+            }
+          }
+        }, { root: null, rootMargin: '0px 0px -40% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+
+        sectionElems.forEach(el => observer.observe(el));
+      }
     });
   </script>
 
