@@ -290,16 +290,16 @@
         t.exports = n.p + "assets/apple-icon-180x180.png"
     },
     "4hhi": function(t, e, n) {
-        t.exports = n.p + "assets/images/profil.jpg"
+        t.exports = n.p + "assets/media/profil.jpg"
     },
     "4vuW": function(t, e, n) {
-        t.exports = n.p + "assets/images/work001-03.jpg"
+        t.exports = n.p + "assets/media/work001-03.jpg"
     },
     "6wzU": function(t, e, n) {
         n("Lu+Q"), n("s51k"), n("m5Wh"), n("x66a"), n("laCn"), n("hxo1"), n("mEQU"), n("1/9l"), n("oOvE"), n("gnpq"), n("vQEO"), n("V1TA")
     },
     "6xrK": function(t, e, n) {
-        t.exports = n.p + "assets/images/work03-hover.jpg"
+        t.exports = n.p + "assets/media/work03-hover.jpg"
     },
     JkW7: function(t, e, n) {
         "use strict";
@@ -358,7 +358,7 @@
         }).call(e, n("juYr"))
     },
     LyUB: function(t, e, n) {
-        t.exports = n.p + "assets/images/work001-04.jpg"
+        t.exports = n.p + "assets/media/work001-04.jpg"
     },
     PExH: function(t, e) {},
     V1TA: function(t, e, n) {
@@ -470,7 +470,7 @@
         }).call(e, n("juYr"))
     },
     bz8M: function(t, e, n) {
-        t.exports = n.p + "assets/images/work001-01.jpg"
+        t.exports = n.p + "assets/media/work001-01.jpg"
     },
     e9iq: function(t, e) {},
     gnpq: function(t, e, n) {
@@ -615,7 +615,7 @@
         }).call(e, n("juYr"))
     },
     jgpj: function(t, e, n) {
-        t.exports = n.p + "assets/images/work01-hover.jpg"
+        t.exports = n.p + "assets/media/work01-hover.jpg"
     },
     juYr: function(t, e, n) {
         var i, o;
@@ -4467,15 +4467,15 @@
         }
         var r = {
             "./apple-icon-180x180.png": "4FPD",
-            "./images/profil.jpg": "4hhi",
-            "./images/space.jpg": "wonT",
-            "./images/work001-01.jpg": "bz8M",
-            "./images/work001-02.jpg": "tmRP",
-            "./images/work001-03.jpg": "4vuW",
-            "./images/work001-04.jpg": "LyUB",
-            "./images/work01-hover.jpg": "jgpj",
-            "./images/work02-hover.jpg": "wvqX",
-            "./images/work03-hover.jpg": "6xrK"
+            "./media/profil.jpg": "4hhi",
+            "./media/space.jpg": "wonT",
+            "./media/work001-01.jpg": "bz8M",
+            "./media/work001-02.jpg": "tmRP",
+            "./media/work001-03.jpg": "4vuW",
+            "./media/work001-04.jpg": "LyUB",
+            "./media/work01-hover.jpg": "jgpj",
+            "./media/work02-hover.jpg": "wvqX",
+            "./media/work03-hover.jpg": "6xrK"
         };
         i.keys = function() {
             return Object.keys(r)
@@ -4515,7 +4515,7 @@
         }).call(e, n("juYr"))
     },
     tmRP: function(t, e, n) {
-        t.exports = n.p + "assets/images/work001-02.jpg"
+        t.exports = n.p + "assets/media/work001-02.jpg"
     },
     vQEO: function(t, e, n) {
         (function(t) {
@@ -4577,10 +4577,10 @@
         }).call(e, n("juYr"))
     },
     wonT: function(t, e, n) {
-        t.exports = n.p + "assets/images/space.jpg"
+        t.exports = n.p + "assets/media/space.jpg"
     },
     wvqX: function(t, e, n) {
-        t.exports = n.p + "assets/images/work02-hover.jpg"
+        t.exports = n.p + "assets/media/work02-hover.jpg"
     },
     x66a: function(t, e, n) {
         (function(t) {
