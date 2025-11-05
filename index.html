@@ -20,7 +20,8 @@
   <link href="/css/custom.css" rel="stylesheet">
 </head>
 
-<body class="minimal">
+<body class="minimal" onload="showAlert()">
+<!-- <body class="minimal"> -->
   <div id="site-border-left"></div>
   <div id="site-border-right"></div>
   <div id="site-border-top"></div>
@@ -206,6 +207,10 @@
       });
 
       PDFObject.embed("/assets/resumes/Hirata_Resume.pdf", "#resume-render"); // For loading pdf
+
+      function showAlert() {
+        alert("The page is currently being edited and may not show elements as intended");
+      } // showAlert
     </script>
 
 </body>
