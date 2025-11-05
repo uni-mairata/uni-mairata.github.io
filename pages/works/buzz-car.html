@@ -105,7 +105,7 @@
 
                         <br id="implementation">
                         <div class="row">
-                            <h3>Implementation</h3>
+                            <h2>Implementation</h2>
                             <div class="col-md-8">
                                 <p>
                                     The Buzz Car was Formula-1 themed to appeal to the target audience and the entire
@@ -136,6 +136,115 @@
 
                         <br id="my-contribution">
                         <div class="row">
+                            <h2>My Work on the Project</h2>
+                            <!-- TODO: Include pictures of the breadboarding, schematic, and PCB design -->
+
+                            <h3>Leadership and Thorough Documentation</h3>
+                            <p>
+                                As the team leader, there was responsibility to ensure the team stayed on track with a
+                                weekly schedule that was created at the beginning of the semester then gradually updated
+                                as needed.
+                            </p>
+                            <img src="/assets/project-media/buzz-car/schedule.png">
+                            <p class="project-img-caption">Integrated master schedule</p>
+                            <p>
+                                Weekly notes, group todo lists, and other documentation was tracked in a lab
+                                notebook in Microsoft OneNote.
+                            </p>
+                            <img src="/assets/project-media/buzz-car/lab-nb-pg-example.png">
+                            <p class="project-img-caption">Example of a lab notebook page</p>
+
+                            <h3>Output Subsystem</h3>
+                            <p>
+                                The output subsystem was assigned, which mainly consists of a speaker and an LCD screen.
+                                Thus, the two components were designed for (breadboarding, schematic, PCB design) and
+                                tested separately. The output subsystem was separate from the main function of the car
+                                to follow a line so there was a balance was kept between power usage and usability of
+                                each main component. This led to the 16x2 LCD and PCB mount speaker to be chosen. The
+                                LCD took more power but was larger than other screens that used less power, leading to
+                                readability of the text. Because of this, a speaker that used less power was chosen even
+                                if it meant limiting the audio functionality to a series of single tones.
+                                <br> The total components used in this subsystem are shown below:
+                            </p>
+                            <p class="project-img-caption">Bill of Materials for the Output Subsystem</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Component</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Datasheet (if available)</th>
+                                        <th scope="col">PCB Footprint</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>16X2 LCD</td>
+                                        <td>1</td>
+                                        <td>TODO: add datasheet</td>
+                                        <td>LCD_16x2:MODULE_LCD-16X2 (custom import) TODO: link the specific footprint used</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>10k potentiometer</td>
+                                        <td>1</td>
+                                        <td><a href="https://www.bourns.com/pdfs/3386.pdf" target="_blank">https://www.bourns.com/pdfs/3386.pdf</a></td>
+                                        <td>10k_Bourns_Potentiometer:3386F1153 (custom import) TODO: link the specific footprint used</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>220<span>Ω</span> resistor</td>
+                                        <td>1</td>
+                                        <td>N/A</td>
+                                        <td>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>330<span>Ω</span> resistor</td>
+                                        <td>2</td>
+                                        <td>N/A</td>
+                                        <td>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Red 5mm diameter LED</td>
+                                        <td>1</td>
+                                        <td>N/A</td>
+                                        <td>LED_THT:LED_D5.0mm</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>PCB mount speaker</td>
+                                        <td>1</td>
+                                        <td><a href="https://cdn.sparkfun.com/datasheets/Components/General/PCBspeaker.pdf" target="_blank">PCBspeaker.pdf</a>></td>
+                                        <td>TODO: add footprint name</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>NPN transistor</td>
+                                        <td>1</td>
+                                        <td>N/A</td>
+                                        <td>TODO: add footprint name</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>1x2 screw terminal</td>
+                                        <td>4</td>
+                                        <td>N/A</td>
+                                        <td>TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>1x3 screw terminal</td>
+                                        <td>1</td>
+                                        <td>N/A</td>
+                                        <td>TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x03_P5.00mm_Horizontal</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4>LCD Screen</h4>
+                            <h4>Speaker</h4>
+
                         </div>
                     </div>
                 </div>

@@ -19,3 +19,9 @@ div .img-credit {
   background-color: gray;
   color: white;
 }
+
+.project-img-caption {
+  font-size: 75%;
+  font-style: italic;
+  color:#777
+}
