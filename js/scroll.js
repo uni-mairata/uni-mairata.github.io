@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             // Offset for fixed navbar (e.g., 60px)
             setTimeout(function () {
-                window.scrollBy({ top: -60, left: 0, behavior: 'instant' });
+                window.scrollBy({ top: -120, left: 0, behavior: 'instant' });
             }, 300);
             // update the hash without the instant jump
             history.replaceState(null, '', '#' + id);
