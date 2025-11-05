@@ -13,20 +13,21 @@
   <meta name="msapplication-tap-highlight" content="no">
 
   <link rel="icon" type="image/x-icon" href="/assets/apple-icon-180x180.png">
-
-  <title>TODO: REPLACE TITLE OF PAGE</title>
+  <title>Bee My Guide Exhibit (Georgia Tech VIP Team)</title>
 
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/scroll.css" rel="stylesheet">
   <link href="/css/custom.css" rel="stylesheet">
 </head>
 
-<!-- <body class="" onload="showAlert()"> --> <!-- Used when the page is being edited -->
-<body class="">
+<body class="" onload="showAlert()"> <!-- Used when the page is being edited -->
+  <!-- <body class=""> -->
   <div id="site-border-left"></div>
   <div id="site-border-right"></div>
   <div id="site-border-top"></div>
   <div id="site-border-bottom"></div>
-  <!-- Add your content of header -->
+
+  <!-- Header START -->
   <header>
     <nav class="navbar  navbar-fixed-top navbar-default">
       <div class="container">
@@ -37,7 +38,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
+        <!-- Links to main pages -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav ">
             <li><a href="/" title="">01 : Home</a></li>
@@ -45,64 +46,44 @@
             <li><a href="/pages/about.html" title="">03 : About me</a></li>
             <li><a href="/pages/contact.html" title="">04 : Contact</a></li>
           </ul>
-
-
-          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-            <li><a href="/pages/works/humidifier.html" title="" class="active">001</a></li>
-            <li><a href="/pages/works/bee-my-guide-exhibit.html" title="">002</a></li>
-            <li><a href="/pages/works/timmy-animatronic.html.html" title="">003</a></li>
-            <li><a href="/pages/works/ADDMELATER.html" title="">004</a></li>
-            <!-- TODO: change to add proper page links-->
-            <li><a href="/pages/works/ADDMELATER.html" title="">005</a></li>
-            <!-- TODO: change to add proper page links-->
-            <li><a href="/pages/works/ADDMELATER.html" title="">006</a></li>
-            <!-- TODO: change to add proper page links-->
+          <!-- Quick-jump dropdown to navigate page sections -->
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg"> <!-- TODO: Change sections to match current page-->
+            <li><a href="#TODO" title="">SECTION NAME HERE</a></li>
           </ul>
-
-
         </div>
       </div>
     </nav>
   </header>
+  <!-- Header END-->
+
   <div class="section-container">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <img src="/assets/work001-01.jpg" class="img-responsive" alt="">
+          <img src="/assets/TBD.jpg" class="img-responsive" alt=""> <!-- TODO: Change page header BG -->
           <div class="card-container">
             <div class="text-center">
-              <h1 class="h2">001 : TODO: CHANGE THIS TITLE AND NUMBER</h1>
+              <h1 class="h2">001 : PROJECT NAME </h1> <!-- TODO: Change project number and title -->
             </div>
-            <p>
-              TODO: CHANGE THIS TEXT
-            </p>
 
-            <blockquote>
-              <p>"TODO: CHANGE THIS QUOTE"</p>
-              <small class="pull-right">Irina Martin</small>
-            </blockquote>
+            <br id="overview">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="/assets/project-media/TBD.jpg" class="img-responsive"
+                  alt="Protagonist of the game">
+              </div>
+              <div class="col-md-8">
+                <h2>
+                  About PROJECT <!-- TODO: Change title-->
+                </h2>
+                <p>
+                    <!-- TODO: fill out information -->
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
-
-
-
-        <div class="col-md-8 col-md-offset-2 section-container-spacer">
-          <div class="row">
-            <div class="col-xs-12 col-md-6">
-              <img src="/assets/work001-02.jpg" class="img-responsive" alt="">
-              <p>Menphis skyline</p>
-            </div>
-            <div class="col-xs-12 col-md-6">
-              <img src="/assets/work001-03.jpg" class="img-responsive" alt="">
-              <p>Menphis skyline</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12">
-          <img src="/assets/TBD.jpg" class="img-responsive" alt="">
-        </div>
-
       </div>
     </div>
   </div>
@@ -118,13 +99,8 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function (event) {
-      navActivePage();
-    });
-  </script>
-
   <script type="text/javascript" src="/js/main.70a66962.js"></script>
+  <script type="text/javascript" src="/js/scroll.js"></script>
   <script type="text/javascript" src="/js/alert-of-editing.js"></script>
 </body>
 

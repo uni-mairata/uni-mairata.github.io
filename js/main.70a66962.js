@@ -358,7 +358,7 @@
         }).call(e, n("juYr"))
     },
     LyUB: function(t, e, n) {
-        t.exports = n.p + "assets//work001-04.jpg"
+        t.exports = n.p + "assets//TBD.jpg"
     },
     PExH: function(t, e) {},
     V1TA: function(t, e, n) {
@@ -4472,7 +4472,7 @@
             "./work001-01.jpg": "bz8M",
             "./work001-02.jpg": "tmRP",
             "./work001-03.jpg": "4vuW",
-            "./work001-04.jpg": "LyUB",
+            "./TBD.jpg": "LyUB",
             "./work01-hover.jpg": "jgpj",
             "./work02-hover.jpg": "wvqX",
             "./work03-hover.jpg": "6xrK"
