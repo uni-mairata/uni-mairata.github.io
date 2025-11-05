@@ -23,15 +23,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         // temporarily suppress observer updates while animating
         ignoreObserver = true;
-        setTimeout(() => { ignoreObserver = false; }, 600);
+        setTimeout(() => { ignoreObserver = false; }, 800);
 
-        if (el && 'scrollIntoView' in el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Offset for fixed navbar
-            setTimeout(function () {
-                window.scrollBy({ top: -250, left: 0, behavior: 'instant' });
-            }, 300);
-            // update the hash without the instant jump
+        if (el) {
+            // compute target position minus an offset to account for fixed navbar
+            const OFFSET = 60; // pixels - tweak to match your navbar height
+            const targetY = el.getBoundingClientRect().top + window.pageYOffset - OFFSET;
+            window.scrollTo({ top: targetY, left: 0, behavior: 'smooth' });
+            // update the hash without causing an immediate jump
             history.replaceState(null, '', '#' + id);
         } else {
             // fallback: set hash (will jump)
