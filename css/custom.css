@@ -3,7 +3,7 @@
  */
 div .img-credit {
     display: inline-block;
-    font-size: small;
+    font-size: 50%;
 }
  
 .home-pg-button:link, .home-pg-button:visited {
