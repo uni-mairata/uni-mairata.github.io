@@ -72,7 +72,9 @@
                         <br id="about-project">
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="/assets/project-media/TBD.jpg" class="img-responsive" alt="">
+                                <img src="/assets/project-media/buzz-car/final-car.jpg" class="img-responsive"
+                                    alt="Picture of the final car">
+                                <p class="project-img-caption">A picture of the finished car prototype</p>
                             </div>
                             <div class="col-md-8">
                                 <h2>
@@ -84,7 +86,7 @@
                                     Given a fictional scenario, third-year undergraduate ECE students played the role of
                                     engineers hired by a toy company entrepreneur in groups of four, utilizing both
                                     hardware and software to solve the problem. The final deliverable was a prototype
-                                    educational kit for K–12 classrooms that could be further developed into a
+                                    educational kit for K-12 classrooms that could be further developed into a
                                     marketable product to be sold.
                                 </p>
                                 <p>
@@ -126,11 +128,14 @@
                                 <br> PCBs were designed for each subsystem (including the controller "subsystem") to
                                 ensure the entire system was modular.
                                 </p>
-                                <!-- TODO: Add a slideshow of the PCB designs -->
                             </div>
 
                             <div class="col-md-4">
-                                <!-- TODO: Add a video of the car following the final track that starts automatically then keeps looping -->
+                                <video width="400" autoplay loop muted controls>
+                                    <source src="/assets/project-media/buzz-car/custom-track-completion.mp4"
+                                        type="video/mp4">
+                                    Your browser does not support HTML video.
+                                </video>
                             </div>
                         </div>
 
@@ -143,15 +148,10 @@
                             <p>
                                 As the team leader, there was responsibility to ensure the team stayed on track with a
                                 weekly schedule that was created at the beginning of the semester then gradually updated
-                                as needed.
-                            </p>
-                            <img src="/assets/project-media/buzz-car/schedule.png">
-                            <p class="project-img-caption">Integrated master schedule</p>
-                            <p>
-                                Weekly notes, group todo lists, and other documentation was tracked in a lab
+                                as needed. Weekly notes, group todo lists, and other documentation was tracked in a lab
                                 notebook in Microsoft OneNote.
                             </p>
-                            <img src="/assets/project-media/buzz-car/lab-nb-pg-example.png">
+                            <img src="/assets/project-media/buzz-car/lab-nb-pg-example.png" width="400">
                             <p class="project-img-caption">Example of a lab notebook page</p>
 
                             <h3>Output Subsystem</h3>
@@ -166,7 +166,9 @@
                                 if it meant limiting the audio functionality to a series of single tones.
                                 <br> The total components used in this subsystem are shown below:
                             </p>
-                            <p class="project-img-caption">Bill of Materials for the Output Subsystem</p>
+                            <h4>
+                                Bill of Materials for the Output Subsystem
+                            </h4>
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -259,6 +261,34 @@
                             </div>
                             <h5>Schematic and PCB Design</h5>
                             <!-- TODO: Add information -->
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="..." alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="..." alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="..." alt="Third slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                             <h5>PCB Soldering and Testing</h5>
                             <!-- TODO: Add information -->
                             <h5>Integration</h5>
@@ -274,7 +304,17 @@
                                 could also be converted into a series of these functions easily using a website by
                                 @TawsifTorabi, which can be checked out <a
                                     href="https://tawsiftorabi.github.io/Midi2ArduinoTone/" target="_blank">here</a>.
+                                <br><br> The user would have the ability to change what is being played while the car is
+                                moving and performing its line-following function. In the demonstration of the
+                                prototype, the audio being played was the Georgia "Ramblin Wreck" Fight Song which was
+                                converted from an mp4 from the official <a href="https://swag.gatech.edu/node/245"
+                                    target="_blank">Georgia Tech Music Downloads page</a> to a MIDI file, then to a
+                                series of tone() functions using the tool mentioned earlier.
                             </p>
+                            <audio controls>
+                                <source src="/assets/project-media/buzz-car/ClassicalWreck.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
                             <h5>Breadboarding</h5>
                             <!-- TODO: Add information -->
                             <h5>Schematic and PCB Design</h5>
