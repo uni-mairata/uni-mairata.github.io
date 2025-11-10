@@ -291,7 +291,58 @@
                                 PCBs for the LCD and speaker were created to be small to fit on the car, utilizing vias
                                 for the GND connections. The PCBs were then fabricated through JLCPCB.
                             </p>
-                            <!-- TODO: add carousel of images -->
+                            <!-- TODO: replace with bootstrap slideshow -->
+                            <!-- LCD Slideshow START -->
+                            <h5>LCD schematics and PCB designs</h5>
+                            <p>There were two different iterations of the LCD schematic and PCB design. One utilizes
+                                levelshifters which were meant to ensure a consistent 5V since it was unclear before
+                                fabrication if the ESP32 could provide consistent enough power. This ended up being
+                                unnecessary, but the design was fabricated just in case. Both iterations can be seen in
+                                the slideshow.</p>
+                            <div class="slideshow-container">
+
+                                <!-- Full-width images with number and caption text -->
+                                <div class="mySlides slideshow-fade">
+                                    <div class="slideshow-numbertext">1 / 4</div>
+                                    <img src="/assets/project-media/buzz-car/LCD-final-schematic.png"
+                                        style="width:100%">
+                                    <div class="slideshow-text">Final LCD schematic design that was used</div>
+                                </div>
+
+                                <div class="mySlides slideshow-fade">
+                                    <div class="slideshow-numbertext">2 / 4</div>
+                                    <img src="/assets/project-media/buzz-car/LCD-levelshifter-schematic.png"
+                                        style="width:100%">
+                                    <div class="slideshow-text">Iteration of LCD schematic design with levelshifters used</div>
+                                </div>
+
+                                <div class="mySlides slideshow-fade">
+                                    <div class="slideshow-numbertext">3 / 4</div>
+                                    <img src="/assets/project-media/buzz-car/LCD-final-PCB.png" style="width:100%">
+                                    <div class="slideshow-text">Final PCB design that was used</div>
+                                </div>
+
+                                <div class="mySlides slideshow-fade">
+                                    <div class="slideshow-numbertext">4 / 4</div>
+                                    <img src="/assets/project-media/buzz-car/LCD-levelshifter-PCB.png"
+                                        style="width:100%">
+                                    <div class="slideshow-text">Iteration of the LCD PCB design with levelshifters used</div>
+                                </div>
+
+                                <!-- Next and previous buttons -->
+                                <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+                            <br>
+
+                            <!-- The dots/circles -->
+                            <div style="text-align:center">
+                                <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+                                <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+                                <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+                            </div>
+                            <!-- LCD Slideshow END -->
+
                             <h4>PCB Soldering and Testing</h4>
                             <p>
                                 After PCBs were fabricated, they were tested through the following procedure:
@@ -342,6 +393,7 @@
     <script type="text/javascript" src="/js/main.70a66962.js"></script>
     <script type="text/javascript" src="/js/scroll.js"></script>
     <script type="text/javascript" src="/js/alert-of-editing.js"></script>
+    <script type="text/javascript" src="/js/img-slideshow.js"></script>
 </body>
 
 </html>
