@@ -26,3 +26,15 @@ div .img-credit {
   font-style: italic;
   color:#777
 }
+
+.sticky-section {
+  position: sticky;
+  top: 0;
+}
+
+/* Disable sticky behavior on mobile to prevent overlap */
+@media (max-width: 974px) {
+  .sticky-section {
+    position: static !important;
+  }
+}
