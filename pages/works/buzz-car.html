@@ -266,7 +266,7 @@
 
                             <h4>Breadboarding</h4>
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-5">
                                     <p>
                                         The LCD screen was breadboarded and initially tested with the ESP32. The
                                         LiquidCrystal library was used in the Arduino IDE. The test code printed "Hello
@@ -274,7 +274,7 @@
                                         the second row.
                                     </p>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-7">
                                     <img class="img-responsive"
                                         src="/assets/project-media/buzz-car/LCD-breadboard-side.png">
                                     <img class="img-responsive"
@@ -295,14 +295,64 @@
                             <!-- TODO: add 3d view of LCD and speaker -->
                             <!-- LCD Section START -->
                             <h5>LCD schematics and PCB designs</h5>
-                            <p>There were two different iterations of the LCD schematic and PCB design. One utilizes
-                                levelshifters which were meant to ensure a consistent 5V since it was unclear before
-                                fabrication if the ESP32 could provide consistent enough power. This ended up being
-                                unnecessary, but the design was fabricated just in case. Both iterations can be seen in
-                                the slideshow.
-                            </p>
-                            <div class="slideshow-container">
-                                <!-- Full-width images with number and caption text -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p>There were two different iterations of the LCD schematic and PCB design. One
+                                        utilizes levelshifters which were meant to ensure a consistent 5V since it was
+                                        unclear before fabrication if the ESP32 could provide consistent enough power.
+                                        This ended up being unnecessary, but the design was fabricated just in case.
+                                        Both iterations can be seen in the slideshow.
+                                    </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img class="img-responsive"
+                                        src="/assets/project-media/buzz-car/LCD-final-schematic.png">
+                                    <img class="img-responsive" src="/assets/project-media/buzz-car/LCD-final-PCB.png">
+                                </div>
+                                <div class="col-md-4">
+                                    <img class="img-responsive"
+                                        src="/assets/project-media/buzz-car/LCD-levelshifter-schematic.png">
+                                    <img class="img-responsive"
+                                        src="/assets/project-media/buzz-car/LCD-levelshifter-PCB.png">
+                                </div>
+
+                                <div class="slideshow-container">
+                                    <!-- Full-width images with number and caption text -->
+                                    <div class="mySlides slideshow-fade">
+                                        <div class="slideshow-numbertext">1 / 3</div>
+                                        <img src="/assets/project-media/buzz-car/LCD-PCB-3D-front.png"
+                                            style="width:100%">
+                                        <div class="slideshow-text">Front of the LCD PCB 3D render</div>
+                                    </div>
+
+                                    <div class="mySlides slideshow-fade">
+                                        <div class="slideshow-numbertext">2 / 3</div>
+                                        <img src="/assets/project-media/buzz-car/LCD-PCB-3D-side.png"
+                                            style="width:100%">
+                                        <div class="slideshow-text">Side of the LCD PCB 3D render</div>
+                                    </div>
+
+                                    <div class="mySlides slideshow-fade">
+                                        <div class="slideshow-numbertext">3 / 3</div>
+                                        <img src="/assets/project-media/buzz-car/LCD-PCB-3D-back.png"
+                                            style="width:100%">
+                                        <div class="slideshow-text">Back of the LCD PCB 3D render</div>
+                                    </div>
+
+                                    <!-- Next and previous buttons -->
+                                    <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+                                </div>
+                                <br>
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                    <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+                                    <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+                                    <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="slideshow-container">
                                 <div class="mySlides slideshow-fade">
                                     <div class="slideshow-numbertext">1 / 4</div>
                                     <img src="/assets/project-media/buzz-car/LCD-final-schematic.png"
@@ -330,20 +380,18 @@
                                     <div class="slideshow-text">Iteration of the LCD PCB design with levelshifters used</div>
                                 </div>
 
-                                <!-- Next and previous buttons -->
                                 <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
                                 <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
                             </div>
                             <br>
-                            <!-- The dots/circles -->
                             <div style="text-align:center">
                                 <span class="slideshow-dot" onclick="currentSlide(1)"></span>
                                 <span class="slideshow-dot" onclick="currentSlide(2)"></span>
                                 <span class="slideshow-dot" onclick="currentSlide(3)"></span>
                                 <span class="slideshow-dot" onclick="currentSlide(4)"></span>
-                            </div>
+                            </div> -->
                             <!-- LCD Section END -->
-                             
+
                             <!-- Speaker Section START -->
                             <h5>Speaker schematics and PCB designs</h5>
                             <!-- Speaker Section END -->
