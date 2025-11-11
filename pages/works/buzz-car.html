@@ -317,41 +317,50 @@
                                 </div>
 
                                 <div class="slideshow-container">
-                                    <!-- Full-width images with number and caption text -->
-                                     <center>
+
                                     <div class="mySlides slideshow-fade">
                                         <div class="slideshow-numbertext">1 / 3</div>
-                                        <img src="/assets/project-media/buzz-car/LCD-PCB-3D-front.png" style="height: 150;">
+                                        <div class="slide-wrapper">
+                                            <a class="slideshow-prev" onclick="plusSlides(-1)">❮</a>
+                                            <img src="/assets/project-media/buzz-car/LCD-PCB-3D-front.png"
+                                                style="height: 150;">
+                                            <a class="slideshow-next" onclick="plusSlides(1)">❯</a>
+                                        </div>
                                         <div class="slideshow-text">Front of the LCD PCB 3D render</div>
                                     </div>
 
                                     <div class="mySlides slideshow-fade">
                                         <div class="slideshow-numbertext">2 / 3</div>
-                                        <img src="/assets/project-media/buzz-car/LCD-PCB-3D-side.png" style="height: 150;">
-                                        <div class="slideshow-text">Side of the LCD PCB 3D render</div>
+                                        <div class="slide-wrapper">
+                                            <a class="slideshow-prev" onclick="plusSlides(-1)">❮</a>
+                                            <img src="/assets/project-media/buzz-car/LCD-PCB-3D-back.png"
+                                                style="height: 150;">
+                                            <a class="slideshow-next" onclick="plusSlides(1)">❯</a>
+                                        </div>
+                                        <div class="slideshow-text">Back of the LCD PCB 3D render</div>
                                     </div>
 
                                     <div class="mySlides slideshow-fade">
                                         <div class="slideshow-numbertext">3 / 3</div>
-                                        <img src="/assets/project-media/buzz-car/LCD-PCB-3D-back.png" style="height: 150;">
-                                        <div class="slideshow-text">Back of the LCD PCB 3D render</div>
+                                        <div class="slide-wrapper">
+                                            <a class="slideshow-prev" onclick="plusSlides(-1)">❮</a>
+                                            <img src="/assets/project-media/buzz-car/LCD-PCB-3D-side.png"
+                                                style="height: 150;">
+                                            <a class="slideshow-next" onclick="plusSlides(1)">❯</a>
+                                        </div>
+                                        <div class="slideshow-text">Side of the LCD PCB 3D render</div>
                                     </div>
-                                    </center>
 
-                                    <!-- Next and previous buttons -->
-                                    <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
-                                    <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
                                 </div>
+
                                 <br>
-                                <!-- The dots/circles -->
                                 <div style="text-align:center">
                                     <span class="slideshow-dot" onclick="currentSlide(1)"></span>
                                     <span class="slideshow-dot" onclick="currentSlide(2)"></span>
                                     <span class="slideshow-dot" onclick="currentSlide(3)"></span>
                                 </div>
-                            </div>
 
-                            <!-- <div class="slideshow-container">
+                                <!-- <div class="slideshow-container">
                                 <div class="mySlides slideshow-fade">
                                     <div class="slideshow-numbertext">1 / 4</div>
                                     <img src="/assets/project-media/buzz-car/LCD-final-schematic.png"
@@ -389,63 +398,68 @@
                                 <span class="slideshow-dot" onclick="currentSlide(3)"></span>
                                 <span class="slideshow-dot" onclick="currentSlide(4)"></span>
                             </div> -->
-                            <!-- LCD Section END -->
+                                <!-- LCD Section END -->
 
-                            <!-- Speaker Section START -->
-                            <h5>Speaker schematics and PCB designs</h5>
-                            <!-- Speaker Section END -->
+                                <!-- Speaker Section START -->
+                                <h5>Speaker schematics and PCB designs</h5>
+                                <!-- Speaker Section END -->
 
-                            <h4>PCB Soldering and Testing</h4>
-                            <p>
-                                After PCBs were fabricated, they were tested through the following procedure:
-                            <ol>
-                                <li>Check for any visible errors (e.g. shorts, missing traces, etc.)</li>
-                                <li>Use a multimeter and do a continuity test</li>
-                                <li>Solder on small components (e.g. resistors) and do another continuity check with the
-                                    multimeter</li>
-                                <li>Solder on the LCD and the speaker and do another continuity check with the
-                                    multimeter</li>
-                                <li>Power on the PCBs and check for any abnormal occurences that would indicate
-                                    something's wrong, like a burning smell</li>
-                                <li>Test the functionality of each PCB</li>
-                            </ol>
-                            The PCBs were then integrated with the rest of the system.
-                            </p>
-                            <h4>Integration</h4>
-                            <p>
-                                The LCD PCB was connected after the sensing and motion subsystems were deemed to
-                                function together well, which means that the sensing values were influencing whether the
-                                car was turning or going straight. The LCD being added was to show this information to
-                                the user. After the LCD was displayig the correct values and the car was turnng as
-                                needed based on sensor values, then the speaker was added.
-                                <br><br> The speaker code was meant to run the entire time the car was in motion, so
-                                threads were used, where one thread was for the speaker and the other thread was for the
-                                sensing and motion code. This code worked successfully to allow the car to run while the
-                                audio was also playing.
-                            </p>
+                                <h4>PCB Soldering and Testing</h4>
+                                <p>
+                                    After PCBs were fabricated, they were tested through the following procedure:
+                                <ol>
+                                    <li>Check for any visible errors (e.g. shorts, missing traces, etc.)</li>
+                                    <li>Use a multimeter and do a continuity test</li>
+                                    <li>Solder on small components (e.g. resistors) and do another continuity check with
+                                        the
+                                        multimeter</li>
+                                    <li>Solder on the LCD and the speaker and do another continuity check with the
+                                        multimeter</li>
+                                    <li>Power on the PCBs and check for any abnormal occurences that would indicate
+                                        something's wrong, like a burning smell</li>
+                                    <li>Test the functionality of each PCB</li>
+                                </ol>
+                                The PCBs were then integrated with the rest of the system.
+                                </p>
+                                <h4>Integration</h4>
+                                <p>
+                                    The LCD PCB was connected after the sensing and motion subsystems were deemed to
+                                    function together well, which means that the sensing values were influencing whether
+                                    the
+                                    car was turning or going straight. The LCD being added was to show this information
+                                    to
+                                    the user. After the LCD was displayig the correct values and the car was turnng as
+                                    needed based on sensor values, then the speaker was added.
+                                    <br><br> The speaker code was meant to run the entire time the car was in motion, so
+                                    threads were used, where one thread was for the speaker and the other thread was for
+                                    the
+                                    sensing and motion code. This code worked successfully to allow the car to run while
+                                    the
+                                    audio was also playing.
+                                </p>
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <footer class="footer-container text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>© 2025 Maika Hirata</p>
+        <footer class="footer-container text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>© 2025 Maika Hirata</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script type="text/javascript" src="/js/main.70a66962.js"></script>
-    <script type="text/javascript" src="/js/scroll.js"></script>
-    <script type="text/javascript" src="/js/alert-of-editing.js"></script>
-    <script type="text/javascript" src="/js/img-slideshow.js"></script>
+        <script type="text/javascript" src="/js/main.70a66962.js"></script>
+        <script type="text/javascript" src="/js/scroll.js"></script>
+        <script type="text/javascript" src="/js/alert-of-editing.js"></script>
+        <script type="text/javascript" src="/js/img-slideshow.js"></script>
 </body>
 
 </html>

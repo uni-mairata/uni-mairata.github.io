@@ -42,28 +42,47 @@ div .img-credit {
 /* Hide the images by default */
 .mySlides {
   display: none;
+  position:relative;
+}
+
+/* Wrapper for image + arrows */
+.slide-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Image itself — change width freely */
+.mySlides img {
+  width: 60%; /* <-- Only change this! */
+  border-radius: 8px;
+  display: block;
 }
 
 /* Next & previous buttons */
 .slideshow-prev, .slideshow-next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  transform: translateY(-50%);
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.4);
+  padding: 12px;
+  border-radius: 3px;
+  cursor: pointer;
   user-select: none;
+  transition: 0.3s;
+  z-index: 5;
+}
+/* Use calc() to dynamically align arrows based on image width */
+.slideshow-prev {
+  left: calc(50% - (60% / 2) - 10px); /* same number as image width */
 }
 
-/* Position the "next button" to the right */
 .slideshow-next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  right: calc(50% - (60% / 2) - 10px);
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -89,6 +108,7 @@ div .img-credit {
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  left: 0;
 }
 
 /* The dots/bullets/indicators */
@@ -112,4 +132,17 @@ div .img-credit {
 @keyframes slideshow-fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+/* Responsive tweak */
+@media only screen and (max-width: 600px) {
+  .mySlides img {
+    width: 90%;
+  }
+  .slideshow-prev {
+    left: calc(50% - (90% / 2) - 5px);
+  }
+  .slideshow-next {
+    right: calc(50% - (90% / 2) - 5px);
+  }
 }
